@@ -635,3 +635,54 @@ footer {
 }
 
 }
+
+
+/* Отключение hover на мобильных устройствах */
+@media (hover: hover) {
+    .header-menu a:hover {
+        color: #ff4646;
+        background-color: #ff46461a;
+        transition: all 0.3s ease;
+    }
+
+    .button-explore:hover {
+        background-color: #ffffff;
+        color: #181c29;
+        transition: all 0.3s ease;
+    }
+
+    .slider-button:not(:disabled):hover svg path {
+        stroke: #ff4646;
+        stroke-opacity: 1;
+        transition: stroke 0.3s ease;
+    }
+
+    .slider-button:not(:disabled):hover svg rect {
+        fill: #ffffff;
+        stroke-opacity: 1;
+        transition: stroke 0.3s ease;
+    }
+
+    .footer-card:hover,
+    .footer-contacts a:hover {
+        color: #ff4646;
+        transition: all 0.3s ease;
+    }
+
+    .socials svg:hover path {
+        stroke: #ff4646;
+        transition: stroke 0.3s ease;
+    }
+
+    .gift-card:hover,
+    .best-gift-card:hover {
+        color: #ff4646;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .gift-filter-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+    }
+}
