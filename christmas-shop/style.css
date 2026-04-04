@@ -629,4 +629,9 @@ footer {
         padding: 60px 20px;
         width: 100%;
     }
+.gift-filter-item {
+    line-height: 13px;
+       padding: 14px 4px;    
+}
+
 }
