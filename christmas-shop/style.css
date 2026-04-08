@@ -356,6 +356,20 @@ header {
     align-items: center;
     position: relative;
 }
+/* сепаратор */
+.timer-item::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);;
+    position: absolute;
+    right: 0;
+    top: 23px;
+    transform: translateY(-50%);
+}
+.timer-item:last-child::after {
+    display: none;
+}
 
 /* section footer */
 
