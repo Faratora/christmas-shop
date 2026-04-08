@@ -467,8 +467,6 @@ footer {
     cursor: pointer;
 }
 
-
-
 .gift-card:hover,
 .best-gift-card:hover {
     color: #ff4646;
@@ -538,8 +536,6 @@ footer {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
 }
-
-
 
 /* burger menu */
 
@@ -632,13 +628,11 @@ footer {
         padding: 60px 20px;
         width: 100%;
     }
-.gift-filter-item {
-    line-height: 13px;
-       padding: 14px 4px;    
+    .gift-filter-item {
+        line-height: 13px;
+        padding: 14px 4px;
+    }
 }
-
-}
-
 
 /* Отключение hover на мобильных устройствах */
 @media (hover: hover) {
