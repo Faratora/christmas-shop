@@ -19,6 +19,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     user-select: none;
+    overflow-x: hidden;
 }
 html {
     scroll-behavior: smooth;
@@ -162,7 +163,7 @@ header {
     max-width: 1440px;
     overflow: hidden;
     min-height: fit-content;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .slider-container {
@@ -426,6 +427,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .socials svg {
@@ -476,10 +478,6 @@ footer {
 .socials svg:hover path {
     stroke: #ff4646;
     transition: stroke 0.3s ease;
-    cursor: pointer;
-}
-
-.socials {
     cursor: pointer;
 }
 
@@ -540,6 +538,7 @@ footer {
     text-transform: uppercase;
     padding: 12px 20px;
     border-radius: 12px;
+    transition: background-color 0.2s ease;
 }
 
 .gift-filter-item.active {
@@ -550,4 +549,151 @@ footer {
 .gift-filter-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
+}
+
+/* burger menu */
+
+.burger-menu {
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    border: none;
+    background: transparent;
+    z-index: 101;
+}
+
+.burger-line {
+    position: absolute;
+    left: 13px;
+    width: 20px;
+    height: 2px;
+    background-color: #181c29;
+    transition: all 0.3s ease;
+}
+
+.burger-line.top {
+    top: 15px;
+}
+.burger-line.bottom {
+    top: 23px;
+}
+
+.burger-menu.active .burger-line.top {
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -1px;
+}
+
+.burger-menu.active .burger-line.bottom {
+    transform: rotate(-45deg);
+    top: 50%;
+    margin-top: -1px;
+}
+
+@media (max-width: 1300px) {
+    .section-footer {
+        /* padding-left: 8px;
+        padding-right: 8px; */
+        padding: 60px 8px;
+    }
+}
+@media (max-width: 1060px) {
+    .footer-card-wrap {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block !important;
+    }
+
+    .menu-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 99;
+        transition: left 0.3s ease;
+    }
+    .snow-icon {
+        padding: 0 28px;
+    }
+}
+
+@media (max-width: 580px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        max-height: none;
+    }
+    .about-img {
+        width: 100%;
+    }
+    .about-wrap {
+        padding: 60px 20px;
+        width: 100%;
+    }
+    .gift-filter-item {
+        line-height: 13px;
+        padding: 14px 4px;
+    }
+}
+
+/* Отключение hover на мобильных устройствах */
+@media (hover: hover) {
+    .header-menu a:hover {
+        color: #ff4646;
+        background-color: #ff46461a;
+        transition: all 0.3s ease;
+    }
+
+    .button-explore:hover {
+        background-color: #ffffff;
+        color: #181c29;
+        transition: all 0.3s ease;
+    }
+
+    .slider-button:not(:disabled):hover svg path {
+        stroke: #ff4646;
+        stroke-opacity: 1;
+        transition: stroke 0.3s ease;
+    }
+
+    .slider-button:not(:disabled):hover svg rect {
+        fill: #ffffff;
+        stroke-opacity: 1;
+        transition: stroke 0.3s ease;
+    }
+
+    .footer-card:hover,
+    .footer-contacts a:hover {
+        color: #ff4646;
+        transition: all 0.3s ease;
+    }
+
+    .socials svg:hover path {
+        stroke: #ff4646;
+        transition: stroke 0.3s ease;
+    }
+
+    .gift-card:hover,
+    .best-gift-card:hover {
+        color: #ff4646;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .gift-filter-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+    }
 }
