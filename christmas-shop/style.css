@@ -617,6 +617,12 @@ footer {
     }
 }
 
+@media (min-width: 769px) {
+    .scroll-to-top {
+        display: none !important;
+    }
+}
+
 @media (max-width: 580px) {
     .about-container {
         display: flex;

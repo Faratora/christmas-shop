@@ -1,7 +1,7 @@
 const scrollToTopBtn = document.querySelector(".scroll-to-top");
  
 window.addEventListener("scroll", () => {
-  if (window.innerWidth <= 768 && window.scrollY >= 300) {
+  if (window.scrollY >= 300) {
     scrollToTopBtn.classList.remove("hidden-btn");
   } else {
     scrollToTopBtn.classList.add("hidden-btn");
