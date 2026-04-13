@@ -546,6 +546,42 @@ footer {
     margin-top: -1px;
 }
 
+/* Scroll-to-Top button */
+.scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    bottom: 7px;
+    right: 7px;
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #ff4646;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0s linear;
+    opacity: 1;
+}
+
+.scroll-to-top.hidden-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-to-top svg path {
+    stroke: #ff4646;
+}
+ 
+.hidden-btn {
+    display: none;
+}
+
+
+/* end Scroll-to-Top button */
+
+
 @media (max-width: 1300px) {
     .section-footer {
         /* padding-left: 8px;
