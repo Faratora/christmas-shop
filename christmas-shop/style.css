@@ -219,10 +219,6 @@ header {
     opacity: 0.5;
     cursor: default;
 }
-.slider-button:not(:disabled):hover svg path {
-    stroke: #ff4646;
-    stroke-opacity: 1;
-}
 
 .slider-button:not(:disabled):hover svg rect {
     fill: #b6b1b1;
@@ -439,53 +435,10 @@ footer {
 }
 
 /* Hover */
-.header-menu a:hover {
-    color: #ff4646;
-    background-color: #ff46461a;
-    transition: all 0.3s ease;
-}
-
 .header-menu-active {
     color: #ff4646;
     background-color: #ff46461a;
     pointer-events: none;
-}
-
-.button-explore:hover {
-    background-color: #ffffff;
-    color: #181c29;
-    transition: all 0.3s ease;
-}
-
-.slider-button:not(:disabled):hover svg path {
-    stroke: #ff4646;
-    stroke-opacity: 1;
-    transition: stroke 0.3s ease;
-}
-
-.slider-button:not(:disabled):hover svg rect {
-    fill: #ffffff;
-    stroke-opacity: 1;
-    transition: stroke 0.3s ease;
-}
-
-.footer-card:hover,
-.footer-contacts a:hover {
-    color: #ff4646;
-    transition: all 0.3s ease;
-}
-
-.socials svg:hover path {
-    stroke: #ff4646;
-    transition: stroke 0.3s ease;
-    cursor: pointer;
-}
-
-.gift-card:hover,
-.best-gift-card:hover {
-    color: #ff4646;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 /* gift */
@@ -683,6 +636,7 @@ footer {
     .socials svg:hover path {
         stroke: #ff4646;
         transition: stroke 0.3s ease;
+        cursor: pointer;
     }
 
     .gift-card:hover,
