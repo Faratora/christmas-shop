@@ -1,8 +1,7 @@
 (function() {
     const burgerBtn = document.querySelector('.burger-menu');
-    const closeBtn = document.querySelector('.menu-close');
     const menuContainer = document.querySelector('.menu-container');
-
+    
     if (!burgerBtn || !menuContainer) return;
 
     function openMenu() {
@@ -27,23 +26,18 @@
         }
     });
 
-    // Закрытие при клике на крестик внутри меню
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeMenu);
-    }
-
     
-
-    // Закрыть меню при клике на любую ссылку
-    const menuLinks = menuContainer.querySelectorAll('a, span');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && !href.startsWith('#')) {
-                return;
-            }
+    // Закрыть меню при клике на любую ссылку или неактивный элемент
+    const menuItems = menuContainer.querySelectorAll('.header-menu li');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+    // Закрыть меню при клике на любую ссылку или неактивный элемент (делегирование)
+    menuContainer.addEventListener('click', function(e) {
+        const target = e.target;
+        if (target.tagName === 'A' || target.classList.contains('header-menu-active') || target.closest('.header-menu li')) {
             closeMenu();
         });
+        }
     });
 
     // Закрыть меню при resize на десктоп
@@ -52,4 +46,10 @@
             closeMenu();
         }
     });
+
 })();
+
+
+
+
+
