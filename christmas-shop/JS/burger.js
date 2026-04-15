@@ -1,6 +1,5 @@
-(function() {
+(function () {
     const burgerBtn = document.querySelector('.burger-menu');
-    const closeBtn = document.querySelector('.menu-close');
     const menuContainer = document.querySelector('.menu-container');
 
     if (!burgerBtn || !menuContainer) return;
@@ -19,7 +18,7 @@
         burgerBtn.setAttribute('aria-expanded', 'false');
     }
 
-       burgerBtn.addEventListener('click', function() {
+    burgerBtn.addEventListener('click', function () {
         if (menuContainer.classList.contains('active')) {
             closeMenu();
         } else {
@@ -27,27 +26,16 @@
         }
     });
 
-    // Закрытие при клике на крестик внутри меню
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeMenu);
-    }
-
-    
-
-    // Закрыть меню при клике на любую ссылку
-    const menuLinks = menuContainer.querySelectorAll('a, span');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && !href.startsWith('#')) {
-                return;
-            }
+    // Закрыть меню при клике на любую ссылку или неактивный элемент
+    const menuItems = menuContainer.querySelectorAll('.header-menu li');
+    menuItems.forEach((item) => {
+        item.addEventListener('click', function (e) {
             closeMenu();
         });
     });
 
     // Закрыть меню при resize на десктоп
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         if (window.innerWidth > 768 && menuContainer.classList.contains('active')) {
             closeMenu();
         }

@@ -38,6 +38,10 @@ html {
     background-size: cover;
     background-position: center;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 /* header menu*/
 header {
     display: flex;
@@ -82,6 +86,7 @@ header {
 
 .header-menu span {
     cursor: default;
+    pointer-events: auto;
 }
 /* Hero section */
 .hero-section {
@@ -438,7 +443,7 @@ footer {
 .header-menu-active {
     color: #ff4646;
     background-color: #ff46461a;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 /* gift */
@@ -633,7 +638,7 @@ body.menu-open {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 270px;
+        /* padding-top: 270px; */
 
         font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -757,7 +762,7 @@ body.menu-open {
 
 @media (max-width: 380px) {
     .menu-container {
-        padding-top: 50px;
+        /* padding-top: 50px; */
     }
     
 
