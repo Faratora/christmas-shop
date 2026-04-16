@@ -1,0 +1,173 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.modal-window {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    background: #ecf3f8;
+    display: flex;
+    flex-direction: column;
+    /* Убираем за пределы экрана */
+    transform: translate(-50%, -50%) translateX(300%);
+
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.modal-window.show {
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gifts-img-gift {
+    background: url('./img/gift-for-work.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.modal-description {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    border-radius: 20px;
+    background: #fff;
+}
+.modal-top {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.card-text {
+    align-self: stretch;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.52;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.48;
+}
+
+.modal-bottom {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.rating {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.power {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.s500 {
+    padding-top: 0px;
+    padding-right: 5px;
+}
+
+.snowflakes {
+    display: flex;
+    padding: 0;
+    gap: 8px;
+}
+
+.snowflakes img {
+    width: 16px;
+    height: 16px;
+}
+
+#close-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 40px;
+    height: 40px;
+}
+
+.gifts-img-home {
+    display: flex;
+    width: 310px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+    background: url('./img/gift-for-work.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+}
+
+.modal-header {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin: 0;
+}

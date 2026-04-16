@@ -7,6 +7,7 @@
 	<title>Christmas Gifts</title>
 	<link rel="stylesheet" href="fonts.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="modal.css">
 	<link rel="icon" href="./img/snow-icon.svg" type="image/svg+xml">
 </head>
 
@@ -228,6 +229,7 @@
 			</div>
 		</div>
 	</footer>
+<!-- Modal windows -->
 
 
 	<!-- Scroll to top button -->
@@ -237,7 +239,71 @@
 		</svg>
 	</button>
 
+<!-- Модальное окно -->
+	<div class="modal-window" id="modal">
+		<div class="modal-wrap">
+			<div class="gifts-img-gift" id="cur-img"></div>
+			<div class="modal-description">
+				<div class="modal-top">
+					<h4 class="modal-header" id="category">category</h4>
+					<h3 class="card-text" id="name">Console.log Guru</h3>
+					<p class="text" id="description">Uses console.log like a crystal ball to find any issue.</p>
+				</div>
+
+
+				<div class="modal-bottom">
+					<h4 class="modal-header">
+						Adds superpowers to:
+					</h4>
+					<div class="rating">
+
+						<div class="power">
+							<p>Live</p>
+							<p class="s500" id="power1">+</p>
+							<div class="snowflakes" id="snowflakes1">
+								<img src="./img/snow-icon.svg">
+							</div>
+						</div>
+
+						<div class="power">
+							<p>Create</p>
+							<p class="s500" id="power2">+</p>
+							<div class="snowflakes" id="snowflakes2">
+								<img src="./img/snow-icon.svg">
+							</div>
+						</div>
+
+						<div class="power">
+							<p>Love</p>
+							<p class="s500" id="power3">+</p>
+							<div class="snowflakes" id="snowflakes3">
+								<img src="./img/snow-icon.svg">
+							</div>
+						</div>
+
+						<div class="power">
+							<p>Dream</p>
+							<p class="s500" id="power4">+</p>
+							<div class="snowflakes" id="snowflakes4">
+								<img src="./img/snow-icon.svg">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<svg id="close-btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+			<path d="M30 10L10 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M10 10L30 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</div>
+
+	<div class="overlay" id="overlay"></div>
+<!-- Script -->
 	<script src="JS/burger.js"></script>
+	<script src="JS/modal.js"></script>
 	<script src="JS/scroll-to-top.js"></script>
 </body>
 
