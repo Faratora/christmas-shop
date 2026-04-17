@@ -26,12 +26,16 @@
         }
     });
 
-    // Закрыть меню при клике на любую ссылку или неактивный элемент
-    const menuItems = menuContainer.querySelectorAll('.header-menu li');
-    menuItems.forEach((item) => {
-        item.addEventListener('click', function (e) {
+    // Закрыть меню при клике на любую ссылку или неактивный элемент (делегирование)
+    menuContainer.addEventListener('click', function (e) {
+        const target = e.target;
+        if (
+            target.tagName === 'A' ||
+            target.classList.contains('header-menu-active') ||
+            target.closest('.header-menu li')
+        ) {
             closeMenu();
-        });
+        }
     });
 
     // Закрыть меню при resize на десктоп
